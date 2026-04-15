@@ -1,20 +1,27 @@
-*{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+*{ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
-    padding: 10px;
+    padding: 0;
     box-sizing: border-box;
-    
 }
 
 #box{
     display: flex;
-    flex-wrap: wrap;
-    margin: 1px auto;
-    padding: 20px;
+    flex-wrap: wrap; 
+    width: 100%;
     gap: 20px;
+    padding: 20px;
+  
 }
 
-.smallbox,.bigbox,.small1box{
+.smallbox{
+    width:  48%; 
+    border: 2px solid #f2d5a2;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fdf2df;
+}
+.bigbox{
+    width: 100%; 
     border: 2px solid #f2d5a2;
     padding: 20px;
     border-radius: 20px;
@@ -26,86 +33,38 @@
     width: 100%;
     max-width: 300px;
     height: 180px;
-    margin:20px;
-    border-radius: 5px;
+    margin:20px
+    
 }
 
 h1{
     text-align: center;
-    width: 100%; 
-    padding: 20px;
-    border-radius: 20px;
-    
 }
  h2, p{
     text-align: left;
     margin: 10px 0;
 }
-.bigbox h2 {
-    width: auto;
-    order: 1;
-}
-
-.bigbox p {
-    flex: 1;
-    order: 3;
-}
-
-.bigbox fieldset {
-    order: 2;
-}
-
-.bigbox{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.small1box,
-.smallbox {
-    width: calc(50% - 10px);
-}
-
-@media (max-width: 600px) {
-    #box {
-        flex-direction: column;
+@media (max-width: 979px) {
+    #box{
+        flex-direction: column; 
     }
-    .small1box,
+
     .smallbox,
-    .bigbox {
-        width: 100%;
-    }
-
-    .imagen {
-        width: 100%;
-        height: auto;
+    .bigbox{
+        width: 100%; 
     }
 }
-
-@media (min-width: 979px) {
-    #box {
-        flex-direction: row;
-        flex-wrap:nowrap;
-
+@media (min-width: 1200px) {
+    #box{
+        flex-direction: row;   
+        flex-wrap: nowrap;   
     }
 
-    .small1box,
     .smallbox,
-    .bigbox {
-        width: 33.33%;
-    }
-
-    .imagen {
-        width: 100%;
-        height: auto;
-    }
-
-    .bigbox h2 {
-        width: 100%;
-        order: 3;
+    .bigbox{
+        width: 50%;        
     }
 }
-
 #title {
     border-top: #000000 solid 1px;
     border-bottom: #000000 solid 1px;
